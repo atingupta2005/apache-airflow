@@ -1,0 +1,199 @@
+    1  clear
+    2  sudo apt -y update
+    3  sudo apt -y install openssl
+    4  sudo apt -y install shellinabox
+    5  sudo /etc/init.d/shellinabox start
+    6  clear
+    7  sudo vi /etc/default/shellinabox
+    8  clear
+    9  clear
+   10  docker ps
+   11  curl -fsSL https://get.docker.com -o get-docker.sh
+   12  sudo sh get-docker.sh
+   13  clear
+   14  sudo usermod -aG docker $USER
+   15  sudo apt -y install docker-compose
+   16  clear
+   17  docker run -itd -p 8080:8080 --name airflow-basic1 python:3.8-slim /bin/bash
+   18  exit
+   19  clear
+   20  docker run -itd -p 8080:8080 --name airflow-basic1 python:3.8-slim /bin/bash
+   21  docker images
+   22  docker container ls
+   23  docker container stop b0
+   24  docker container rm b0
+   25  docker container ls
+   26  clear
+   27  docker run -it -p 8080:8080 --name airflow-basic1 python:3.8-slim /bin/bash
+   28  dicker container ls
+   29  docker container ls
+   30  docker container ls -a
+   31  docker container start 6ad
+   32  docker ps
+   33  clear
+   34  docker exec -it 6ad4 bash
+   35  clear
+   36  docker ps
+   37  docker exec -it 6ad bash
+   38  clear
+   39  docker ps -a
+   40  docker rm 6ad
+   41  git clone https://github.com/atingupta2005/apache-airflow
+   42  clear
+   43  cd apache-airflow/
+   44  ls
+   45  cd 01-The\ basics\ of\ Apache\ Airflow/
+   46  ls
+   47  docker build -t atinairflow:latest .
+   48  docker images
+   49  clear
+   50  docker images
+   51  docker run -d --name airflow_1  -p 8080:8080 airflow-basic
+   52  docker run -d --name atinairflow:latest  -p 8080:8080 airflow-basic
+   53  docker run -d --name airlflow_1  -p 8080:8080 atinairflow
+   54  docker ps
+   55  clear
+   56  docker ps
+   57  docker exec -it airflow_1 bash
+   58  docker exec -it airlflow_1  bash
+   59  clear
+   60  ls
+   61  docker ps
+   62  docker exec -it airlflow_1  bash
+   63  clear
+   64  docker pull apache/airflow
+   65  docker images
+   66  clear
+   67  docker pull apache/airflow:1.10.10-2-python3.7
+   68  ls
+   69  docker exec -it airlflow_1  bash
+   70  clear
+   71  cd
+   72  mkdir atin_custom_airflow
+   73  cd atin_custom_airflow/
+   74  ls
+   75  ll
+   76  vi Dockerfile
+   77  docker build -t atin_custom_airflow .
+   78  cls
+   79  clear
+   80  docker images
+   81  cat Dockerfile
+   82  ls
+   83  vi Dockerfile
+   84  clear
+   85  history
+   86  clear
+   87  docker images
+   88  docker tag 3e21 atingupta2005/atin_custom_airflow
+   89  docker images
+   90  docker login
+   91  docker push atingupta2005/atin_custom_airflow
+   92  docker pull atingupta2005/atin_custom_airflow
+   93  clear
+   94  docker ps
+   95  docker ps -a
+   96  docker container start bf
+   97  docker exec -it bf bash
+   98  ls
+   99  docker ps
+  100  docner container stop bf
+  101  docker container stop bf
+  102  cd apache-airflow/
+  103  cd 08-The\ Forex\ Data\ Pipeline/
+  104  ls
+  105  ./start.sh
+  106  ls
+  107  ll
+  108  chmod a+x *.sh
+  109  ./st
+  110  ./start.sh
+  111  clear
+  112  docker ps
+  113  docner container stop bf
+  114  docker container stop bf
+  115  docker ps
+  116  docker exec -it 63e bash
+  117  docker ps -a
+  118  docker container start bf
+  119  docker exec -it bf bash
+  120  docker container stop  bf
+  121  clear
+  122  ls
+  123  cd apache-airflow/
+  124  ls
+  125  cd 08-The\ Forex\ Data\ Pipeline/
+  126  ls
+  127  chmod a+x *.sh
+  128  ./start.sh
+  129  history
+  130  ls
+  131  ./reset.sh
+  132  docker ps
+  133  ./start.sh
+  134  docker ps
+  135  docker network ls
+  136  docker network inspect  airflow-network
+  137  ls
+  138  cd mnt/
+  139  ls
+  140  ls airflow/
+  141  ls airflow/dags/
+  142  clear
+  143  docker ps
+  144  ls
+  145  docker ps
+  146  docker exec -it airflow bash
+  147  docker ps
+  148  docker exec -it airflow bash
+  149  cd airflow/
+  150  ls
+  151  nano airflow.cfg
+  152  cd dags
+  153  vi forex_data_pipeline.py
+  154  cd apache-airflow/
+  155  cd 08-The\ Forex\ Data\ Pipeline/
+  156  ls
+  157  clear
+  158  ls
+  159  cd mnt/
+  160  cd airflow/
+  161  vim airflow.cfg
+  162  cd ..
+  163  ./stop.sh
+  164  ./start.sh
+  165  docker exec airflow  -it  bash
+  166  docker ps
+  167  docker exec -it airflow bash
+  168  cd mnt/
+  169  cd airflow/
+  170  dags
+  171  cd dags/
+  172  vi forex_data_pipeline.py
+  173  airflow tasks test forex_data_pipeline send_slack_notification 2021-01-01
+  174  docker exec -it airflow bash
+  175  vi forex_data_pipeline.py
+  176  docker exec -it airflow bash
+  177  vi forex_data_pipeline.py
+  178  docker exec -it airflow bash
+  179  vi forex_data_pipeline.py
+  180  docker exec -it airflow bash
+  181  clear
+  182  docker images
+  183  clear
+  184  docker images
+  185  docker tag 5239 atingupta2005/postgres-atin
+  186  docker images
+  187  docker login
+  188  docker push atingupta2005/postgres-atin
+  189  docker logout
+  190  docker login
+  191  docker pull apache/airflow
+  192  docker run -itd -p 8095:8080 --env "_AIRFLOW_DB_UPGRADE=true" --env "_AIRFLOW_WWW_USER_CREATE=true" --env "_AIRFLOW_WWW_USER_PASSWORD=admin" --name airflow_prod_02 apache/airflow webserver
+  193  docker logs -f 068
+  194  docker ps
+  195  docker comtainer stop airflow_prod_02
+  196  docker container stop airflow_prod_02
+  197  docker container rm  airflow_prod_02
+  198  history
+  199  history  > day3_history.txt
