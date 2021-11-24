@@ -130,7 +130,8 @@ Select * FROM forex_rates
 
 ## Task 7 - Sending Email
 - We need to create a token if we want to use gmail
-  - Note 2fa should not be active
+  - Note 2fa should be active for this to work
+  - Enable 2fa - https://myaccount.google.com/security
   - Create token using below URL:
     - https://security.google.com/settings/security/apppasswords
 - Open - mnt/airflow/airflow.cfg
@@ -145,7 +146,7 @@ Select * FROM forex_rates
 ```
 ./restart
 ```
-- Open yupmail.com
+- Open yopmail.com
   - Create an inbox
 - Refer - 08-The Forex Data Pipeline\mnt\airflow\dags\forex_data_pipeline.py
   - send_email_notification
@@ -175,7 +176,7 @@ airflow tasks test forex_data_pipeline send_email_notification 2021-01-01
     - Specify workspace name
 - Create slack connection - slack_conn
   - Conn_type: http
-  - Password: Webhook URL
+  - Host: Webhook URL
 
 - Run the task
 ```
