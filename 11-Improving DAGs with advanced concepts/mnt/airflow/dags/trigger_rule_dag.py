@@ -93,8 +93,7 @@ with DAG(dag_id='trigger_rule_dag',
         trigger_rule="all_success"
     )
 
-    # Implement dependencies below
-    # ie:
-    # a >> b        : b depends on a
-    # [a b] >> c    : c depends on a and b
-    # ...
+[ download_failed_task, download_succeed_task ] >> process_task
+[ download_website_a_task, download_website_b_task ] >> download_failed_task
+[ download_website_a_task, download_website_b_task ] >> download_succeed_task
+process_task >> [ notif_a_task, notif_b_task ]
