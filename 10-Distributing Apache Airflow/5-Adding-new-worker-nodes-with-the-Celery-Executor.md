@@ -18,7 +18,6 @@ postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
 - Stop existing
 ```
 docker-compose -f docker-compose-CeleryExecutor.yml down
-docker container stop worker_2;docker container rm worker_2;
 ```
 
 - Start existing Airflow cluster
