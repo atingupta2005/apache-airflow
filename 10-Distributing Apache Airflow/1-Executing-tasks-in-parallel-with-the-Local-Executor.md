@@ -16,7 +16,7 @@ docker-compose -f docker-compose-LocalExecutor.yml up -d
 - Refresh the page after 1 min
 - Check Gantt view - one task at a time
 
-## Enable Parallism=3
+## Enable parallelism=3
 - Increase parallelism = 3
 - Restart
 ```
