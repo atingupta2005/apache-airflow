@@ -1,5 +1,5 @@
 # Executing tasks in parallel with the Local Executor
-## Enable Parallism=1
+## Enable parallelism=1
 - Refer
   - parallel_dag.py
   - docker-compose-LocalExecutor.yml
