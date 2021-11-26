@@ -57,7 +57,7 @@ docker ps
   - If we have 4 workers, we can execute upto 64 tasks at a time
   - However if the parameter - parallelism = 16 then only 16 tasks would actually run in parallel and not 64
   - Likewise, if dag_concurrency = 5 then only 5 tasks will be able to run in parallel for a given DAGRun in our workers.
-  - For worker_concurrency parameter, more processes are usually the better but there is a cut-off point where adding more processed affects performance in negative ways. You need to make your own experiments to find the number that works best in your case as this varies based on application, workload, task runtime and other factors.
+  - For worker_concurrency parameter, more processes are usually the better but there is a cut-off point where adding more processes affects performance in negative ways. You need to make your own experiments to find the number that works best in your case as this varies based on application, workload, task runtime and other factors.
 - Refer below diagram for better understanding
 - The parameters in the diagram are ordered according to the priority
 ![](img/tasks-distribution.png)
