@@ -28,6 +28,11 @@ docker-compose -f docker-compose-LocalExecutor.yml up -d
 - Enable the toggle and refresh after 1 min
 - Check Gantt view - 3 tasks at a time
 
+## dag_concurrency vs parallelism
+- parallelism is the maximum number of tasks that can run concurrently within a single Airflow environment. If this setting is set to 32, no more than 32 tasks can run at once across all DAGs. Think of this as "maximum active tasks anywhere." If you notice that tasks are stuck in a queue for extended periods of time, this is a value you may want to increase.
+- dag_concurrency determines how many task instances the Airflow Scheduler is able to schedule at once per DAG. Think of this as "maximum tasks that can be scheduled at once, per DAG."
+
+
 ## Enable dag_concurrency to specify how many tasks to run in parallel for each DAG
 - Change dag_concurrency = 2
 - Restart
