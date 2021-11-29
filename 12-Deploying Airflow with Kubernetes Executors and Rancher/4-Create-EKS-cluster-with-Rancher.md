@@ -1,0 +1,11 @@
+# Create EKS cluster with Rancher
+- Open Rancher and click Add cluster
+- Click - Amazon EKS
+  - Cluster Name: airflow-eks-cluster
+  - Account Access: Specify security credentials
+  - Click configure cluster
+  - Version: v1.1.14
+  - Click Next -> Next and click Create
+- It will take 10-15 min to create EKS
+- Open EKS on AWS Console and notice that cluster is being created
+- Once cluster is active on Rancher, open it and view the dashboard

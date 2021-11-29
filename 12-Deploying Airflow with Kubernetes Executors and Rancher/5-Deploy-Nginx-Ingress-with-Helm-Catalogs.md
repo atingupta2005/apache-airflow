@@ -1,0 +1,13 @@
+# Deploy Nginx Ingress with Helm Catalogs
+- Open Rancher UI -> Global -> Apps -> Manage Catalogues
+- Enable Helm catalogue
+- Open Apps again
+- Click Launch
+- Search nginx
+- Select nginx-ingress
+- Define
+  - Name: nginx-ingress
+  - Available Roles: Cluster
+- Click - Launch
+- Open it
+- Review the page

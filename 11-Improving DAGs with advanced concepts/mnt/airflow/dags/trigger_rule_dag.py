@@ -37,8 +37,8 @@ def notif_b():
     print("notif_b")
     #raise ValueError("error")
 
-with DAG(dag_id='trigger_rule_dag', 
-    default_args=default_args, 
+with DAG(dag_id='trigger_rule_dag',
+    default_args=default_args,
     schedule_interval="@daily") as dag:
 
     # Change the trigger rules according to the
@@ -50,7 +50,7 @@ with DAG(dag_id='trigger_rule_dag',
     # one_success
     # none_failed
     # none_skipped
-    
+
     download_website_a_task = PythonOperator(
         task_id='download_website_a',
         python_callable=download_website_a,
@@ -60,7 +60,7 @@ with DAG(dag_id='trigger_rule_dag',
     download_website_b_task = PythonOperator(
         task_id='download_website_b',
         python_callable=download_website_b,
-        trigger_rule="all_success"    
+        trigger_rule="all_success"
     )
 
     download_failed_task = PythonOperator(

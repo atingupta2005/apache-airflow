@@ -21,7 +21,8 @@ with DAG(dag_id=DAG_NAME, default_args=default_args, schedule_interval="@once") 
     subdag_1 = SubDagOperator(
         task_id='subdag-1',
         subdag=factory_subdag(DAG_NAME, 'subdag-1', default_args),
-        executor=SequentialExecutor()
+        executor=SequentialExecutor(),
+        #executor=CeleryExecutor(),
     )
 
     some_other_task = DummyOperator(
@@ -31,7 +32,8 @@ with DAG(dag_id=DAG_NAME, default_args=default_args, schedule_interval="@once") 
     subdag_2 = SubDagOperator(
         task_id='subdag-2',
         subdag=factory_subdag(DAG_NAME, 'subdag-2', default_args),
-        executor=SequentialExecutor()
+        executor=SequentialExecutor(),
+        #executor=CeleryExecutor(),
     )
 
     end = DummyOperator(

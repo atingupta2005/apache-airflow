@@ -1,0 +1,13 @@
+# Cleaning AWS services
+- Open Rancher UI -> Global
+- Select the cluster from list and click Delete
+- Open AWS console -> EKS
+- Notice that cluster is getting deleted
+- Open CloudFormation
+- Notice that it's also getting deleted
+- If anything is not deleted, we need to delete manually
+- Open EC2 service on AWS console
+- Terminate all EC2 instances
+- Open Load Balancer from Left Menu and delete it
+- Open VPC service
+- Remove the VPCs created by Rancher
