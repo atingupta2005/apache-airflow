@@ -15,6 +15,28 @@ __pycache__/
 **/*future*
 **/*future*
 
+**/*assessment*
+**/*.xlsx
+**/*Finance*
+**/*.pyc
+**/*.pptx
+Recycled/*
+**/Recycled/*
+**/Future/*
+Future/*
+*Optional*
+**/*Optional*
+*Skip*
+**/*Skip*
+*Pending*
+**/*Pending*
+**/Debug
+**/debug
+**/Bin
+**/bin
+**/*.exe
+**Extra**
+**/**Extra**
 
 
 # C extensions
