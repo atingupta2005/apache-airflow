@@ -3,6 +3,20 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+**/*pending*
+**/*Pending*
+
+**/*trainer*
+**/*Trainer*
+
+**/*skip*
+**/*Skip*
+
+**/*future*
+**/*future*
+
+
+
 # C extensions
 *.so
 
