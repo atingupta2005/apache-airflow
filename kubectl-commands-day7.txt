@@ -1,0 +1,135 @@
+    1  kubectl create namespace airflow
+    2  kubectl get namespaces
+    3  az aks get-credentials --resource-group rgaks --name aksatin
+    4  kubectl create namespace airflow
+    5  kubectl get namespaces
+    6  helm repo add apache-airflow https://airflow.apache.org
+    7  helm repo update
+    8  helm search repo airflow
+    9  helm install airflow apache-airflow/airflow --namespace airflow --debug
+   10  helm ls -n airflow
+   11  helm install airflow apache-airflow/airflow --namespace airflow --debug
+   12  helm uninstall airflow
+   13  helm uninstall airflow -n airflow
+   14  helm install airflow apache-airflow/airflow --namespace airflow --debug
+   15  kubectl get pods -n airflow
+   16  helm ls -n airflow
+   17  kubectl port-forward svc/airflow-webserver 8080:8080 -n airflow --context kind-airflow-cluster
+   18  kubectl port-forward svc/airflow-webserver 8080:8080 -n airflow
+   19  kubectl get all  -n airflow
+   20  kubectl expose deployment airflow-webserver
+   21  kubectl expose deployment airflow-webserver -n airflow
+   22  kubectl edit svc airflow-webserver  -n  airflow
+   23  kubectl get all  -n airflow
+   24  kubectl get svc  -n airflow
+   25  kubectl get pods -n airflow
+   26  kubectl logs -f airflow-webserver-5cbb967748-x84ht  -n airflow
+   27  kubectl get all  -n airflow
+   28  curl --insecure -sfL https://vmrancher2.uaenorth.cloudapp.azure.com/v3/import/tvw466zlsppppq9k766dlvmcdgcwl288cnfvqgqxwstccsvpt4r5d7_c-m-k5rzwrn9.yaml | kubectl apply -f -
+   29  kubectl get all
+   30  kubectl get ns
+   31  kubectl get all -n cattle-system
+   32  kubectl get pod/cattle-cluster-agent-7cc4dbd7c-jfc7v -n cattle-system
+   33  kubectl describe  pod/cattle-cluster-agent-7cc4dbd7c-jfc7v -n cattle-system
+   34  history
+   35  curl --insecure -sfL https://vmrancher2.uaenorth.cloudapp.azure.com/v3/import/tvw466zlsppppq9k766dlvmcdgcwl288cnfvqgqxwstccsvpt4r5d7_c-m-k5rzwrn9.yaml | kubectl delete  -f -
+   36  curl --insecure -sfL https://vmrancher2.uaenorth.cloudapp.azure.com/v3/import/gr2987kqw7bj2x978xbsk25gb46mgp4wq6svltdkzv2tzzlpswwqdv_c-m-dwpwmp6t.yaml | kubectl apply -f -
+   37  kubectl get all -n cattle-system
+   38  clear
+   39  kubectl get all -n cattle-system
+   40  az aks get-credentials --resource-group rkaks2 --name aks2
+   41  helm repo add apache-airflow https://airflow.apache.org
+   42  helm repo update
+   43  helm install airflow apache-airflow/airflow --namespace airflow --debug
+   44  kubectl get pods
+   45  kubectl get ns
+   46  kubectl create ns airflow
+   47  helm install airflow apache-airflow/airflow --namespace airflow --debug
+   48  az aks get-credentials --resource-group rgaks --name aksatin
+   49  kubectl get ns
+   50  history
+   51  curl --insecure -sfL https://vmrancher2.uaenorth.cloudapp.azure.com/v3/import/tvw466zlsppppq9k766dlvmcdgcwl288cnfvqgqxwstccsvpt4r5d7_c-m-k5rzwrn9.yaml
+   52  wget  https://vmrancher2.uaenorth.cloudapp.azure.com/v3/import/tvw466zlsppppq9k766dlvmcdgcwl288cnfvqgqxwstccsvpt4r5d7_c-m-k5rzwrn9.yaml
+   53  curl --insecure -sfL https://vmrancher2.uaenorth.cloudapp.azure.com/v3/import/tvw466zlsppppq9k766dlvmcdgcwl288cnfvqgqxwstccsvpt4r5d7_c-m-k5rzwrn9.yaml > airflow.yaml
+   54  ls
+   55  vim airflow.yaml
+   56  kubectl get ns
+   57  helm list
+   58  helm list -ns airflow
+   59  helm list --helm
+   60  helm list --help
+   61  helm list -n airflow
+   62  helm uninstall airflow -n airflow
+   63  helm show values apache-airflow/airflow > values.yaml
+   64  helm ls -n airflow
+   65  helm list -n airflow
+   66  ls
+   67  cat values.yaml
+   68  helm install airflow apache-airflow/airflow --namespace airflow --debug --timeout 10m0s
+   69  helm ls -n airflow
+   70  kubectl get pods -n airflow
+   71  helm show values apache-airflow/airflow > values.yaml
+   72  vi values.yaml
+   73  kubectl apply -f variables.yaml
+   74  vi values.yaml
+   75  helm upgrade --install airflow apache-airflow/airflow -n airflow -f values.yaml --debug
+   76  vi values.yaml
+   77  helm upgrade --install airflow apache-airflow/airflow -n airflow -f values.yaml --debug
+   78  kubectl edit svc airflow-webserver  -n  airflow
+   79  kubectl get svc  -n airflow
+   80  kubectl get all  -n airflow
+   81  vi values.yaml
+   82  helm upgrade --install airflow apache-airflow/airflow -n airflow -f values.yaml --debug
+   83  kubectl get pods  -n airflow
+   84  kubectl logs -f airflow-webserver-6656bffd9b-4mkwx  -n airflow
+   85  kubectl get pods  -n airflow
+   86  kubectl logs -f airflow-scheduler-7c76696789-7gdsn   -n airflow
+   87  kubectl get pods  -n airflow
+   88  kubectl get alls  -n airflow
+   89  kubectl get all  -n airflow
+   90  kubectl get pods  -n airflowkubectl edit svc airflow-webserver  -n  airflow
+   91  kubectl edit svc airflow-webserver  -n  airflow
+   92  vi values.yaml
+   93  kubectl edit svc airflow-webserver  -n  airflow
+   94  kubectl get all  -n airflow
+   95  helm upgrade --install airflow apache-airflow/airflow -n airflow -f values.yaml --debug
+   96  vi values.yaml
+   97  kubectl get all  -n airflow
+   98  kubectl get pods   -n airflow
+   99  az aks get-credentials --resource-group rgaks --name aksatin
+  100  kubectl get ns
+  101  kubectl get all -n airflow
+  102  kubectl get ns
+  103  kubectl get all -n airflow
+  104  kubectl get ns
+  105  kubectl delete ns airflow
+  106  kubectl delete ns airflow &
+  107  kubectl get all
+  108  kubectl get  pods
+  109  helm uninstall airflow --namespace airflow
+  110  kubectl get  pods
+  111  kubectl get   ns
+  112  helm install airflow apache-airflow/airflow --namespace airflow --debug --timeout 20m0s
+  113  kubectl create ns airflow
+  114  helm install airflow apache-airflow/airflow --namespace airflow --debug --timeout 20m0s
+  115  kubectl get ns
+  116  kubectl get svc -
+  117  kubectl get svc
+  118  az aks get-credentials --resource-group rgaksairflow --name aksairflow
+  119  kubectl get pods
+  120  kubectl get nodes
+  121  kubectl get nodes -o wide
+  122  kubectl apply -f https://vmrancher2.uaenorth.cloudapp.azure.com/v3/import/jkgk7gbp94hsj5bb6c9n5s8wz9l9t2cnzcqnpq59fkxdgf78jl9vgd_c-m-mx5bprmz.yaml
+  123  curl --insecure -sfL https://vmrancher2.uaenorth.cloudapp.azure.com/v3/import/jkgk7gbp94hsj5bb6c9n5s8wz9l9t2cnzcqnpq59fkxdgf78jl9vgd_c-m-mx5bprmz.yaml | kubectl apply -f -
+  124  kubectl get ns
+  125  clear
+  126  kubectl get all -n cattle-system
+  127  clear
+  128  kubectl create namespace airflow
+  129  kubectl get ns
+  130  helm repo add apache-airflow https://airflow.apache.org
+  131  helm install airflow apache-airflow/airflow --namespace airflow
+  132  kubectl get svc -n airflow
+  133  kubectl edit svc -n airflow
+  134  kubectl get svc -n airflow
+  135  history
