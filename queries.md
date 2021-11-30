@@ -1,8 +1,25 @@
 - Share Docker and Kubernetes
   - https://github.com/atingupta2005/Docker-Kubernetes-AWS-LnT-Aug-2020
-  - 
+  -
 
 - Webhook trigger
+  - https://airflow.apache.org/docs/apache-airflow/2.0.0/stable-rest-api-ref.html#section/Overview/Versioning-and-Endpoint-Lifecycle
+```
+function triggerDag(dagId, dagParameters){
+    var urlEncodedParameters = encodeURIComponent(dagParameters);
+    var dagRunUrl = "http://airflow:8080/admin/rest_api/api/v1.0/trigger_dag?dag_id="+dagId+"&conf="+urlEncodedParameters;
+    $.ajax({
+        url: dagRunUrl,
+        dataType: "json",
+        success: function(msg) {
+            console.log('Successfully started the dag');
+        },
+        error: function(e){
+           console.log('Failed to start the dag');
+        }
+    });
+}
+```
 
 - Dependency on 2 different DAGs which are running in different installation - One dag should run only if another DAG is created.
 
