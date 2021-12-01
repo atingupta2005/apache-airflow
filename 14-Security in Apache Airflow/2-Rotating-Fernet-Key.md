@@ -17,6 +17,12 @@ vi mnt/airflow/airflow.cfg
 ```
 fernet_key = <new-key>,<old-key>
 ```
+
+- Restart Airflow so that the fernet_key configuration will be reflected
+```
+./restart
+```
+
 - In docker container run command
 ```
 docker ps
