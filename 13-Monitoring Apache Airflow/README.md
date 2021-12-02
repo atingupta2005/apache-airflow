@@ -154,14 +154,14 @@ Metrics can be filtered withstatsd\_allow\_list
 
 ![](img/13-Monitoring%20Apache%20Airflow12.png)
 
-# Airflow Log Cleanup
+## Airflow Log Cleanup
 
 ![](img/13-Monitoring%20Apache%20Airflow13.png)
 
-# Airflow DB Cleanup
+## Airflow DB Cleanup
 
 ![](img/13-Monitoring%20Apache%20Airflow14.png)
 
-# Airflow Kill Halted Tasks
+## Airflow Kill Halted Tasks
 
 ![](img/13-Monitoring%20Apache%20Airflow15.png)
